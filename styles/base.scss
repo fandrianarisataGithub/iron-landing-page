@@ -9,6 +9,9 @@ main {
     width: 1371.5px;
     margin-left: auto;
     margin-right: auto;
+    @include respond-to(medium) {
+        padding: 0 25px;
+    }
     .base-section-first {
         height: 100vh;
         width: 100%;
@@ -76,15 +79,25 @@ main {
             width: 60.7px;
             height: 60.7px;
         }
+        .lang {
+            margin-top: 50px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            color: $dark-color;
+        }
         .vertical-position {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            width: 278px;
+            width: 308px;
             transform: rotate(90deg);
             position: absolute;
-            top: calc(100vh - 278px);
+            top: calc(100vh - 328px);
             left: -105px;
             p {
                 display: block;
@@ -116,6 +129,26 @@ main {
                             height: 100%;
                         }
                     }
+                }
+                .whatsapp {
+                    padding-left: 15px;
+                    &::before {
+                        display: block;
+                        content: "";
+                        width : 1px;
+                        height: 35px;
+                        background-color: $dark-color;
+                       position: relative;
+                       top: 18px;
+                    }
+                    img {
+                        width: 33.12px;
+                        height: 33.12px;
+                        position: relative;
+                        left: 17px;
+                        bottom: 17px;
+                    }
+                    
                 }
             }
             

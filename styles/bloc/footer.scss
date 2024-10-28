@@ -1,0 +1,63 @@
+.bloc-footer {
+    margin: 152px auto 50px;
+    .top-footer {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $dark-color;
+        padding-top: 102px;
+        .part-logo {
+            &:first-child {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                > img {
+                    display: block;
+                    width: 60.7px;
+                    height: 60.7px;
+                    &:last-child {
+                        width: 36.42px;
+                        height: 72px;
+                    }
+                    &:not(:first-child) {
+                        margin-left: 25px;
+                    }
+                }
+            }
+        }
+    }
+    .bottom-footer {
+        margin: 102px auto 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        section {
+            width: 50%;
+            display: flex;
+            
+            &:first-child {
+                justify-content: flex-start;
+                font-size: 14px;
+                line-height: 18.2px;
+                font-weight: 700;
+                .term {
+                    border-right: 1px solid $dark-color;
+                    padding-right: 25px;
+                }
+                >  div:last-child {
+                    margin-left: 25px;
+                }
+            }
+            &:last-child {
+                justify-content: flex-end;
+                font-size: 12px;
+                line-height: 15.6px;
+                font-weight: 700;
+                > div {
+                    &:last-child {
+                        margin-left: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

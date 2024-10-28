@@ -1,0 +1,22 @@
+.bloc-how-order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 152px auto;
+    .title {
+        width: 282px;
+        height: 94px;
+        font-size: 36px;
+        line-height: 46.8px;
+        color: $dark-color;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    .response {
+        width: 121px;
+        font-size: 12px;
+        line-height: 15.6px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}

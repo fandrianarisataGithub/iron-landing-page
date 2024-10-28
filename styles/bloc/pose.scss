@@ -1,0 +1,93 @@
+.bloc-pose {
+    .navigation {
+        width: 1146px;
+        margin-left: auto;
+        margin-right: auto;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 152px;
+            li {
+                a {
+                    text-decoration: none;
+                    color: $dark-color;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    line-height: 15.6px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .list-images {
+        > div {
+            &:not(:first-child) {
+                margin-top: 25px;
+            }
+        }
+        >.devant {
+            position: relative;
+            > span {
+                display: block;
+                position: absolute;
+                text-transform: uppercase;
+                transform: rotate(-90deg);
+                top: 25px;
+                left: -50px;
+                line-height: 15.6px;
+                font-size: 12px;
+                font-weight: 700;
+            }
+            > img {
+                width: 100%;
+            }
+        }
+        .dos {
+            position: relative;
+            > span {
+                display: block;
+                position: absolute;
+                text-transform: uppercase;
+                transform: rotate(-90deg);
+                top: 25px;
+                right: -40px;
+                line-height: 15.6px;
+                font-size: 12px;
+                font-weight: 700;
+            }
+            > img {
+                width: 100%;
+            }
+        }
+        .epaul-devant {
+            display: flex;
+            justify-content: space-between;
+            > div {
+                width: calc(50% - 12.5px);
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                > span {
+                    display: block;
+                    text-transform: uppercase;
+                    line-height: 15.6px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    margin-top: 15px;
+                }
+                > img {
+                    width: 100%;
+                }
+                &:last-child {
+                    span {
+                        text-align: end;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.bloc-choose-your-size {
+    .top-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 1145px;
+        margin: 152px auto;
+        .number {
+            img {
+                display: block;
+            }
+        }
+        > img {
+            display: block;
+            width: 96.74px;
+            height: 54.88px;
+        }
+        .title {
+            text-transform: uppercase;
+            font-size: 36px;
+            line-height: 46.8px;
+            font-weight: 700;
+        }
+    }
+    .sirt {
+        margin: 152px auto;
+        width: 100%;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}

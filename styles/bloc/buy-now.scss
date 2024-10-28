@@ -1,0 +1,26 @@
+.bloc-buy-now {
+    margin: 152px auto;
+    > div {
+        width: 620px;
+        margin: 50px auto;
+    }
+    .text-150 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .description-fine {
+        text-align: center;
+        line-height: 20.8px;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    .description-strong {
+        text-align: center;
+        line-height: 31.2px;
+        font-size: 24px;
+        font-weight: 800;
+        color: $primary-color;
+        text-transform: uppercase;
+    }  
+}

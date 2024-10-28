@@ -1,0 +1,23 @@
+.bloc-animate-vertical {
+    display: flex;
+    height: 282px;
+    width: 964px;
+    position: relative;
+    margin : 150px auto;
+    p {
+        font-size: 36px;
+        line-height: 46.8px;
+        text-align: center;
+        color: $light-blue;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    img {
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        left: calc(964px / 2 - 15px);
+        top: calc(282px / 2 - 15px);
+    }
+}

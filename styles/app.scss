@@ -1,42 +1,6 @@
-/* Police Regular */
-@font-face {
-    font-family: 'Syne';
-    src: url('fonts/Syne/regular.ttf') format('truetype');
-    font-weight: 400; /* Normal */
-    font-style: normal;
-}
 
-/* Police Medium */
-@font-face {
-    font-family: 'Syne';
-    src: url('fonts/Syne/medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
 
-/* Police Semi-Bold */
-@font-face {
-    font-family: 'Syne';
-    src: url('fonts/Syne/semi-bold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-/* Police Bold */
-@font-face {
-    font-family: 'Syne';
-    src: url('fonts/Syne/bol.ttf') format('truetype');
-    font-weight: 700; /* Bold */
-    font-style: normal;
-}
-
-/* Police Extra-Bold */
-@font-face {
-    font-family: 'Syne';
-    src: url('fonts/Syne/astraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 
 @import 
     'color',

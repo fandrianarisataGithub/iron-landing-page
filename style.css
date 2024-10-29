@@ -79,11 +79,62 @@ main .header-left .vertical-position .square-container .square:not(:last-child) 
 main .header-left .vertical-position .square-container .square:first-child {
   background-color: #005EB8;
 }
+main .header-left .vertical-position .square-container .square:first-child:hover {
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+}
+main .header-left .vertical-position .square-container .square:first-child:hover::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 1px solid #005EB8;
+  z-index: 1;
+}
 main .header-left .vertical-position .square-container .square:last-child {
   background-color: #F7CA45;
 }
+main .header-left .vertical-position .square-container .square:last-child:hover {
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+}
+main .header-left .vertical-position .square-container .square:last-child:hover::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 1px solid #F7CA45;
+  z-index: 1;
+}
 main .header-left .vertical-position .square-container .square:nth-child(2) {
   background-color: #808364;
+}
+main .header-left .vertical-position .square-container .square:nth-child(2):hover {
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+}
+main .header-left .vertical-position .square-container .square:nth-child(2):hover::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 1px solid #808364;
+  z-index: 1;
 }
 main .header-right {
   position: fixed;
@@ -188,6 +239,50 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #FFFFFF;
+  transition: all 0.4s ease-in-out;
+}
+.primary-button:hover:after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+.primary-button:hover:before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
+.primary-button:after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+  background: #005EB8;
+  content: attr(data-back);
+  transform: translateY(-50%) rotateX(90deg);
+}
+.primary-button:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 40px;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  background: #005EB8;
+  content: attr(data-front);
+  transform: translateY(0) rotateX(0);
+  width: 100%;
+  height: 100%;
 }
 
 .btn-dark {
@@ -251,6 +346,10 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   align-items: center;
   margin-bottom: 152px;
 }
+.bloc-pose .navigation ul li {
+  width: 223px;
+  padding-bottom: 50px;
+}
 .bloc-pose .navigation ul li a {
   text-decoration: none;
   color: #262626;
@@ -258,6 +357,14 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   font-weight: 700;
   line-height: 15.6px;
   font-size: 12px;
+}
+.bloc-pose .navigation ul li:nth-child(2) {
+  border-bottom: 1px solid rgb(217, 217, 217);
+}
+.bloc-pose .navigation ul li:nth-child(2) a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .bloc-pose .list-images > div:not(:first-child) {
   margin-top: 25px;
@@ -346,12 +453,24 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   line-height: 266.45px;
   font-weight: 700;
   color: #005EB8;
+  position: relative;
+  z-index: 5;
+}
+.bloc-support-us .percent-text .section-rates .content .before-hidden, .bloc-support-us .percent-text .section-rates .content .after-hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1s ease-in-out;
+}
+.bloc-support-us .percent-text .section-rates .content .before-hidden {
+  z-index: -2;
 }
 .bloc-support-us .percent-text .section-rates span {
   font-size: 80px;
   line-height: 80px;
   color: #005EB8;
   margin-left: 25px;
+  margin-top: 40px;
 }
 .bloc-support-us .percent-text .paragraph {
   width: 338px;
@@ -360,6 +479,8 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   flex-direction: column;
   justify-content: center;
   margin-left: 100px;
+  position: relative;
+  transition: all 1s ease-in-out;
 }
 .bloc-support-us .percent-text .paragraph p {
   font-size: 24px;
@@ -404,6 +525,23 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   line-height: 20.8px;
   text-transform: uppercase;
 }
+.bloc-support-us:hover .percent-text .section-rates .content .before-hidden {
+  top: -110px;
+  transition: all 1s ease-in-out;
+  color: rgb(213, 229, 242);
+}
+.bloc-support-us:hover .percent-text .section-rates .content .after-hidden {
+  top: 110px;
+  transition: all 1s ease-in-out;
+  color: rgb(213, 229, 242);
+}
+.bloc-support-us:hover .percent-text .paragraph {
+  margin-left: 0px;
+  transition: all 1s ease-in-out;
+}
+.bloc-support-us:hover .percent-text .paragraph p {
+  color: #005EB8;
+}
 
 .bloc-text-slide {
   display: flex;
@@ -432,6 +570,7 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   height: 21.48px;
   position: relative;
   bottom: 5px;
+  transform: rotate(145deg);
 }
 
 @keyframes slide-left {
@@ -464,11 +603,24 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   height: 30px;
   left: 467px;
   top: 126px;
+  transition: all 1s ease-in-out;
+}
+.bloc-animate-vertical:hover img {
+  transition: all 1s ease-in-out;
+}
+.bloc-animate-vertical:hover img:first-child {
+  top: -100px;
+}
+.bloc-animate-vertical:hover img:last-child {
+  top: 296px;
+}
+.bloc-animate-vertical:hover p {
+  color: #262626;
 }
 
 .bloc-join-now {
   margin: 152px auto;
-  width: 620px;
+  width: 620px !important;
 }
 .bloc-join-now .title {
   display: block;

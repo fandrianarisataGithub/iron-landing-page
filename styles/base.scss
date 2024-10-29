@@ -54,17 +54,69 @@ main {
                     width: 18px;
                     height: 18px;
                     margin-top: 5px;
+
                     &:not(:last-child) {
                         margin-right: 10px;
                     }
                     &:first-child {
                         background-color: $primary-color;
+                        &:hover {
+                            cursor: pointer;
+                            position: relative;
+                            z-index: 20;
+                            &::after {
+                                display: block;
+                                content: "";
+                                position: absolute;
+                                left: -3px;
+                                top: -3px;
+                                width: 24px;
+                                height: 24px; 
+                                background-color: transparent;
+                                border: 1px solid $primary-color;
+                                z-index: 1;
+                            }
+                        }
                     }
                     &:last-child {
                         background-color: $yellow-color;
+                        &:hover {
+                            cursor: pointer;
+                            position: relative;
+                            z-index: 20;
+                            &::after {
+                                display: block;
+                                content: "";
+                                position: absolute;
+                                left: -3px;
+                                top: -3px;
+                                width: 24px;
+                                height: 24px; 
+                                background-color: transparent;
+                                border: 1px solid $yellow-color;
+                                z-index: 1;
+                            }
+                        }
                     }
                     &:nth-child(2) {
                         background-color: $grey-color;
+                        &:hover {
+                            cursor: pointer;
+                            position: relative;
+                            z-index: 20;
+                            &::after {
+                                display: block;
+                                content: "";
+                                position: absolute;
+                                left: -3px;
+                                top: -3px;
+                                width: 24px;
+                                height: 24px; 
+                                background-color: transparent;
+                                border: 1px solid $grey-color;
+                                z-index: 1;
+                            }
+                        }
                     }
                 }
             }

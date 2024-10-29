@@ -20,12 +20,24 @@
                 line-height: 266.45px;
                 font-weight: 700;
                 color: $primary-color;
+                position: relative;
+                z-index: 5;
+                .before-hidden, .after-hidden {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: all 1s ease-in-out;
+                }
+                .before-hidden {
+                    z-index: -2;
+                }
             }
             span {
                 font-size: 80px;
                 line-height: 80px;
                 color: $primary-color;
                 margin-left: 25px;
+                margin-top: 40px;
             }
         }
         .paragraph {
@@ -35,6 +47,9 @@
             flex-direction: column;
             justify-content: center;
             margin-left: 100px;
+            position: relative;
+            transition: all 1s ease-in-out;
+
             p  {
                 font-size: 24px;
                 line-height: 31.2px;
@@ -42,6 +57,7 @@
                 color: $light-blue;
             }
         }
+        
     }
     .rebirth-support {
         display: flex;
@@ -80,5 +96,29 @@
             }
         }
     }
-    
+    &:hover {
+        .percent-text {
+            .section-rates {
+                .content {
+                    .before-hidden {
+                        top: -110px;
+                        transition: all 1s ease-in-out;
+                        color: $light-blue;
+                    }
+                    .after-hidden {
+                        top: 110px;
+                        transition: all 1s ease-in-out;
+                        color: $light-blue;
+                    }
+                }
+            }   
+            .paragraph {
+                margin-left: 0px;
+                transition: all 1s ease-in-out;
+                p  {
+                    color: $primary-color;
+                }
+            }      
+        }
+    }
 }

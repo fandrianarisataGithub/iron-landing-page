@@ -19,5 +19,20 @@
         height: 30px;
         left: calc(964px / 2 - 15px);
         top: calc(282px / 2 - 15px);
+        transition: all 1s ease-in-out;
+    }
+    &:hover {
+        img {
+            &:first-child {
+                top: -100px;
+            }
+            &:last-child {
+                top: 296px;
+            }
+            transition: all 1s ease-in-out;
+        }
+        p {
+            color: $dark-color
+        }
     }
 }

@@ -1,4 +1,5 @@
 .primary-button {
+    $speed: 0.4s;
     width: 244px;
     height: 79px;
     background-color: $primary-color;
@@ -13,4 +14,52 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid $light-color;
+    transition: all $speed ease-in-out;
+    &:hover{
+        &:after{
+            opacity: 1;
+            transform: translateY(0) rotateX(0);
+        }
+        
+        &:before{
+            opacity: 0;
+            transform: translateY(50%) rotateX(90deg);
+        }
+    }
+    &:after{
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $light-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all $speed ease-in-out;
+        position: absolute;
+        background: $primary-color;
+        content: attr(data-back);
+        transform: translateY(-50%) rotateX(90deg);
+    }
+      
+      &:before{
+        top: 0;
+        left: 0;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 40px;
+        transition: all $speed ease-in-out;
+        position: relative;
+        background: $primary-color;
+        content: attr(data-front);
+        transform: translateY(0) rotateX(0);
+        width: 100%;
+        height: 100%;
+    }
 }

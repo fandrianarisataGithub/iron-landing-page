@@ -4,11 +4,12 @@ body {
     overflow-x: hidden;
 }
 main {
-    padding: 0 50px;
+    padding: 0;
     position: relative;
     width: 1371.5px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid red;
     @include respond-to(medium) {
         padding: 0 25px;
     }
@@ -19,7 +20,8 @@ main {
     .header-left {
         position: fixed;
         top:50px;
-        left: 50px;
+        //left: 50px;
+        left: calc(calc((100% - $maxMainWidth) / 2) + 25px);
         display: flex;
         flex-direction: column;
         img {
@@ -73,7 +75,7 @@ main {
     .header-right {
         position: fixed;
         top: 50px;
-        right: 50px;
+        right: calc(calc((100% - $maxMainWidth) / 2) + 25px);
         img {
             display: block;
             width: 60.7px;
@@ -98,7 +100,7 @@ main {
             transform: rotate(90deg);
             position: absolute;
             top: calc(100vh - 328px);
-            left: -105px;
+            left: -125px;
             p {
                 display: block;
                 display: inline-block;
@@ -154,4 +156,13 @@ main {
             
         }
     }
+    >div {
+        &:not(.header-fixed, .bloc-recommandation) {
+            border:  2px solid green;
+            width: 1116px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    
 }

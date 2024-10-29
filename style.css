@@ -51,11 +51,12 @@ body {
 }
 
 main {
-  padding: 0 50px;
+  padding: 0;
   position: relative;
   width: 1371.5px;
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid red;
 }
 @media (max-width: 768px) {
   main {
@@ -69,7 +70,7 @@ main .base-section-first {
 main .header-left {
   position: fixed;
   top: 50px;
-  left: 50px;
+  left: calc((100% - 1371.5px) / 2 + 25px);
   display: flex;
   flex-direction: column;
 }
@@ -122,7 +123,7 @@ main .header-left .vertical-position .square-container .square:nth-child(2) {
 main .header-right {
   position: fixed;
   top: 50px;
-  right: 50px;
+  right: calc((100% - 1371.5px) / 2 + 25px);
 }
 main .header-right img {
   display: block;
@@ -148,7 +149,7 @@ main .header-right .vertical-position {
   transform: rotate(90deg);
   position: absolute;
   top: calc(100vh - 328px);
-  left: -105px;
+  left: -125px;
 }
 main .header-right .vertical-position p {
   display: block;
@@ -201,6 +202,12 @@ main .header-right .vertical-position .square-container .whatsapp img {
   left: 17px;
   bottom: 17px;
 }
+main > div:not(.header-fixed, .bloc-recommandation) {
+  border: 2px solid green;
+  width: 1116px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .primary-button {
   width: 244px;
@@ -245,7 +252,7 @@ main .header-right .vertical-position .square-container .whatsapp img {
 }
 
 .bloc-pose .navigation {
-  width: 1146px;
+  width: 1116px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -294,8 +301,8 @@ main .header-right .vertical-position .square-container .whatsapp img {
   position: absolute;
   text-transform: uppercase;
   transform: rotate(-90deg);
-  top: 25px;
-  right: -40px;
+  top: -10px;
+  right: -25px;
   line-height: 15.6px;
   font-size: 12px;
   font-weight: 700;
@@ -338,7 +345,7 @@ main .header-right .vertical-position .square-container .whatsapp img {
 .bloc-support-us .percent-text {
   margin: 152px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .bloc-support-us .percent-text .section-rates {
@@ -358,14 +365,15 @@ main .header-right .vertical-position .square-container .whatsapp img {
   font-size: 80px;
   line-height: 80px;
   color: #005EB8;
-  margin-left: 50px;
+  margin-left: 25px;
 }
 .bloc-support-us .percent-text .paragraph {
-  width: calc(50% - 100px);
+  width: 338px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 100px;
 }
 .bloc-support-us .percent-text .paragraph p {
   font-size: 24px;
@@ -386,7 +394,7 @@ main .header-right .vertical-position .square-container .whatsapp img {
 .bloc-support-us .rebirth-support > div .number {
   display: block;
   width: 100px;
-  text-align: center;
+  text-align: start;
   font-size: 32px;
   color: #005EB8;
 }
@@ -408,6 +416,7 @@ main .header-right .vertical-position .square-container .whatsapp img {
   margin-top: 40px;
   font-size: 16px;
   line-height: 20.8px;
+  text-transform: uppercase;
 }
 
 .bloc-text-slide {
@@ -514,7 +523,7 @@ main .header-right .vertical-position .square-container .whatsapp img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 1145px;
+  width: 100%;
   margin: 152px auto;
 }
 .bloc-choose-your-size .top-section .number img {
@@ -648,6 +657,7 @@ main .header-right .vertical-position .square-container .whatsapp img {
 
 .bloc-footer {
   margin: 152px auto 50px;
+  width: 1116px;
 }
 .bloc-footer .top-footer {
   display: flex;

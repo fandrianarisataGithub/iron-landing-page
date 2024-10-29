@@ -7,7 +7,7 @@
     .percent-text {
         margin: 152px 0;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         .section-rates {
             width: calc(50% - 100px);
@@ -25,15 +25,16 @@
                 font-size: 80px;
                 line-height: 80px;
                 color: $primary-color;
-                margin-left: 50px;
+                margin-left: 25px;
             }
         }
         .paragraph {
-            width: calc(50% - 100px);
+            width: 338px;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin-left: 100px;
             p  {
                 font-size: 24px;
                 line-height: 31.2px;
@@ -53,7 +54,7 @@
             .number {
                 display: block;
                 width: 100px;
-                text-align: center;
+                text-align: start;
                 font-size: 32px;
                 color: $primary-color;
             }
@@ -74,6 +75,7 @@
                     margin-top: 40px;
                     font-size: 16px;
                     line-height: 20.8px;
+                    text-transform: uppercase;
                 }
             }
         }

@@ -98,7 +98,63 @@
                     }
 
                 }
+                &-part2 {
+                    display: flex;
+                    .choice-delivery {
+                        display: flex;
+                        justify-content: space-between;
+                        width: calc(100% - 163px);
+                        flex-direction: column;
+                        .choice-item {
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-direction: row;
+                            align-items: center;
+                            .form-item {
+                                display: flex;
+                                justify-content: flex-start;
+                                flex-direction: row;
+                                align-items: center;
+                                .text {
+                                    width: 314px;
+                                    margin-left: 25px;
+                                    .title {
+                                        text-transform: uppercase;
+                                        font-size: $dark-color;
+                                        font-weight: 700;
+                                        font-size: 12px;
+                                        line-height: 15.6px;
+                                        width: 270px;
+                                    }
+                                    .value {
+                                        color: $label-color;
+                                        font-weight: 700;
+                                        font-size: 14px;
+                                        line-height: 14px;
+                                        width: 270px;
+                                    }
+                                }
+                            }
+                            .value-item {
+                                img {
+                                    width: 25px;
+                                    height: 15px;
+                                }
+                                >.value-item-value {
+                                    font-size: 20px;
+                                    line-height: 22px;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                        
+                    }
+                    .free-shipping {
+                        width: 163px;
+                    }
+                }
             }
+            
             .choose-quantity-quality {
                 margin-top: 50px;
                 border-top: 1px solid $light-grey;
@@ -187,12 +243,46 @@
                     }
                 }
             } 
+            .form-user {
+                margin-top: 50px;
+                padding-top: 50px;
+                border-top: 1px solid $light-grey;
+                form {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .part-form {
+                        width: calc(50% - 25px);
+                        .form-group {
+                            &:not(:first-child) {
+                                margin-top: 5px;
+                            }
+                            label {
+                                font-size: 12px;
+                                line-height: 16.8px;
+                                text-transform: uppercase;
+                            }
+                            input {
+                                &.form-control {
+                                    border: 1px solid $light-grey;
+                                    border-radius: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             .next {
                 margin-top: 50px;
                 border-top: 1px solid $light-grey;
                 padding-top: 50px;
                 display: flex;
                 justify-content: flex-end;
+                >button {
+                    &:last-child {
+                        margin-left: 25px;
+                    }
+                }
             }
         }
         &.purchase {

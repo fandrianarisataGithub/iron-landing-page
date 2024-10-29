@@ -203,7 +203,6 @@ main .header-right .vertical-position .square-container .whatsapp img {
   bottom: 17px;
 }
 main > div:not(.header-fixed, .bloc-recommandation) {
-  border: 2px solid green;
   width: 1116px;
   margin-left: auto;
   margin-right: auto;
@@ -220,6 +219,27 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   border: 1px solid #005EB8;
   display: block;
   margin: auto;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-dark {
+  background-color: #262626;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 20.8px;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding-top: 5px;
+  min-width: 60px;
+  outline: none;
+  border: 1px solid #262626;
 }
 
 .bloc-header .sub-container {
@@ -713,6 +733,323 @@ main > div:not(.header-fixed, .bloc-recommandation) {
 }
 .bloc-footer .bottom-footer section:last-child > div:last-child {
   margin-left: 25px;
+}
+
+.bloc-order-first {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 150px;
+}
+.bloc-order-first > div.place-an-order {
+  width: 694px;
+  border-right: 1px solid rgb(217, 217, 217);
+  padding-right: 50px;
+}
+.bloc-order-first > div.place-an-order .header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(217, 217, 217);
+  padding-bottom: 50px;
+}
+.bloc-order-first > div.place-an-order .header > .title {
+  font-size: 32px;
+  line-height: 41.6px;
+  font-weight: 800;
+}
+.bloc-order-first > div.place-an-order .header > .step {
+  display: block;
+  font-size: 16px;
+  line-height: 20.8px;
+  font-weight: 700;
+}
+.bloc-order-first > div.place-an-order .content {
+  margin-top: 50px;
+}
+.bloc-order-first > div.place-an-order .content h2 {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.bloc-order-first > div.place-an-order .content .image-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bloc-order-first > div.place-an-order .content .image-details:first-child {
+  margin-top: 50px;
+}
+.bloc-order-first > div.place-an-order .content .image-details:not(:first-child) {
+  margin-bottom: 10px;
+}
+.bloc-order-first > div.place-an-order .content .image-details > img {
+  width: 84px;
+  height: 84px;
+}
+.bloc-order-first > div.place-an-order .content .image-details > .number-purchase {
+  display: flex;
+  width: calc(100% - 168px);
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+}
+.bloc-order-first > div.place-an-order .content .image-details > .number-purchase ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bloc-order-first > div.place-an-order .content .image-details > .number-purchase ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.bloc-order-first > div.place-an-order .content .image-details > .number-purchase ul li:not(:first-child) {
+  margin-left: 25px;
+}
+.bloc-order-first > div.place-an-order .content .image-details > .number-purchase ul li .title {
+  color: rgb(117, 117, 117);
+  font-size: 12px;
+  line-height: 15.6px;
+  font-weight: 700;
+}
+.bloc-order-first > div.place-an-order .content .image-details > .number-purchase ul li .value {
+  color: #262626;
+  font-size: 14px;
+  line-height: 18.2px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.bloc-order-first > div.place-an-order .content .image-details > .number-purchase .price {
+  border-right: 1px solid rgb(217, 217, 217);
+  padding-right: 50px;
+}
+.bloc-order-first > div.place-an-order .content .image-details > button.dismis {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 25px;
+  font-size: 25px;
+  color: #262626;
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality {
+  margin-top: 50px;
+  border-top: 1px solid rgb(217, 217, 217);
+  padding-top: 50px;
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .section {
+  display: flex;
+  align-items: center;
+  height: 120px;
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .section > .title {
+  font-size: 12px;
+  line-height: 15.6;
+  font-weight: 700;
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .section .list-color > ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 120px;
+  list-style: none;
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .section .list-color > ul li {
+  display: flex;
+  align-items: center;
+  height: 120px;
+  list-style: none;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .section .list-color > ul li > .value-color-sirt {
+  margin-top: 10px;
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .choose-size {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 65px;
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .choose-size > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 65px;
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .choose-size > div:last-child {
+  align-items: flex-end;
+  justify-content: end;
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .choose-size > div > label {
+  font-size: 12px;
+  line-height: 16.8px;
+  font-weight: 700;
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .choose-size .size {
+  width: 240px;
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .choose-size .size select {
+  width: 100%;
+  height: 40px;
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .choose-size .quatity .input > button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .choose-size .quatity .input > input {
+  text-align: center;
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .choose-size .button-content > button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.bloc-order-first > div.place-an-order .choose-quantity-quality > .choose-size .form-element {
+  height: 40px;
+}
+.bloc-order-first > div.place-an-order .next {
+  margin-top: 50px;
+  border-top: 1px solid rgb(217, 217, 217);
+  padding-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+.bloc-order-first > div.purchase {
+  width: calc(100% - 694px);
+  margin-left: 50px;
+}
+.bloc-order-first > div.purchase > .title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.bloc-order-first > div.purchase > .purchase-content {
+  margin-top: 25px;
+}
+.bloc-order-first > div.purchase > .purchase-content > ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+.bloc-order-first > div.purchase > .purchase-content > ul > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+}
+.bloc-order-first > div.purchase > .purchase-content > ul > li > .color-qty-size {
+  width: 166px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bloc-order-first > div.purchase > .purchase-content > ul > li > .color-qty-size > div {
+  width: 71px;
+}
+.bloc-order-first > div.purchase > .purchase-content > ul > li > .color-qty-size > div > .title {
+  font-size: 12px;
+  line-height: 15.6px;
+  font-weight: 700;
+  color: rgb(117, 117, 117);
+}
+.bloc-order-first > div.purchase > .purchase-content > ul > li > .color-qty-size > div > .value {
+  font-size: 12px;
+  line-height: 15.6px;
+  font-weight: 700;
+  color: #262626;
+  margin-top: 5px;
+}
+.bloc-order-first > div.purchase > .purchase-content > ul > li > .color-qty-size > div:last-child {
+  margin-top: 25px;
+}
+.bloc-order-first > div.purchase > .purchase-content > ul > li > .sub-total img {
+  width: 25px;
+  height: 13px;
+}
+.bloc-order-first > div.purchase > .purchase-content > ul > li > .sub-total > .value {
+  font-size: 12px;
+  line-height: 16.8px;
+  font-weight: 700;
+  color: #262626;
+}
+.bloc-order-first > div.purchase > .purchase-content > ul > li:not(:first-childh) {
+  margin-top: 25px;
+}
+.bloc-order-first > div.purchase > .discount {
+  margin-top: 25px;
+  border-top: 1px solid rgb(217, 217, 217);
+  padding-top: 25px;
+}
+.bloc-order-first > div.purchase > .discount > .title {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16.8px;
+  font-weight: 500;
+}
+.bloc-order-first > div.purchase > .discount > .input-group {
+  width: 100%;
+  margin-top: 5px;
+}
+.bloc-order-first > div.purchase > .discount > .input-group > button {
+  width: 70px;
+  height: 40px;
+  border: 1px solid #262626;
+  background-color: rgba(0, 0, 0, 0);
+}
+.bloc-order-first > div.purchase > .discount > .input-group > .input-discount {
+  width: calc(100% - 75px);
+  height: 40px;
+  font-size: 12px;
+  line-height: 16px;
+  margin-right: 5px;
+  border: 1px solid #262626;
+}
+.bloc-order-first > div.purchase > .calcul {
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid rgb(217, 217, 217);
+}
+.bloc-order-first > div.purchase > .calcul > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.bloc-order-first > div.purchase > .calcul > ul img {
+  width: 20px;
+  height: 15px;
+}
+.bloc-order-first > div.purchase > .calcul > ul > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.bloc-order-first > div.purchase > .calcul > ul > li .title {
+  font-size: 12px;
+  line-height: 16.8px;
+  color: rgb(117, 117, 117);
+  font-weight: 700;
+}
+.bloc-order-first > div.purchase > .calcul > ul > li .value {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 16.8px;
+  color: #262626;
+  font-weight: 700;
+}
+.bloc-order-first > div.purchase > .calcul > ul > li:not(:first-child) {
+  margin-top: 15px;
+}
+.bloc-order-first > div.purchase > .calcul > .payment {
+  margin-top: 25px;
+}
+.bloc-order-first > div.purchase > .calcul > .payment > button {
+  width: 100%;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */

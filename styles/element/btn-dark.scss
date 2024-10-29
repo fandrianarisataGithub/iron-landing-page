@@ -1,0 +1,16 @@
+.btn-dark {
+    background-color: $dark-color;
+    color: $light-color;
+    font-size: 16px;
+    line-height: 20.8px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding-top: 5px;
+    min-width: 60px;
+    outline: none;
+    border: 1px solid $dark-color;
+}

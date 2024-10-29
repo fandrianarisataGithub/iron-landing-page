@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="header-left header-fixed">
+            <img src="./images/lion.png" alt="iron style">
+        </div>
+        <div class="header-right header-fixed">
+            <img src="./images/logo.png" alt="iron style">
+            <a href="#" class="lang">
+                EN
+            </a>
+        </div>
+        <div class="base-section bloc-order-first">
+            <div class="place-an-order">
+                <div class="header">
+                    <h1 class="title">PLACE AN <br>ORDER</h1>
+                    <div class="step">
+                        STEP <span class="step-value">1</span> / 3
+                    </div>
+                </div>
+                <div class="content">
+                    <h2>MY CART</h2>
+                    <div class="image-details">
+                        <img src="./images/homme-face.png" style="width: 84px;" alt="iron join now">
+                        <div class="number-purchase">
+                            <ul>
+                                <li>
+                                    <div class="title">COLOR</div>
+                                    <div class="value">WHITE</div>
+                                </li>
+                                <li>
+                                    <div class="title">SIZE</div>
+                                    <div class="value">L</div>
+                                </li>
+                                <li>
+                                    <div class="title">QTY</div>
+                                    <div class="value">1</div>
+                                </li>
+                            </ul>
+                            <div class="price">
+                                <span class="value">75</span><span class="curency">$</span>
+                            </div>
+                        </div>
+                        <button class="button dismis"><span class="fa fa-times"></span></button>
+                    </div>
+                    <div class="image-details">
+                        <img src="./images/homme-face.png" style="width: 84px;" alt="iron join now">
+                        <div class="number-purchase">
+                            <ul>
+                                <li>
+                                    <div class="title">COLOR</div>
+                                    <div class="value">WHITE</div>
+                                </li>
+                                <li>
+                                    <div class="title">SIZE</div>
+                                    <div class="value">L</div>
+                                </li>
+                                <li>
+                                    <div class="title">QTY</div>
+                                    <div class="value">1</div>
+                                </li>
+                            </ul>
+                            <div class="price">
+                                <span class="value">75</span><span class="curency">$</span>
+                            </div>
+                        </div>
+                        <button class="button dismis"><span class="fa fa-times"></span></button>
+                    </div>
+                </div>
+                <form class="choose-quantity-quality">
+                    <div class="section">
+                        <div class="title">
+                            CHOOSE A COLOR
+                        </div>
+                        <div class="list-color">
+                            <ul>
+                                <li>
+                                    <div class="sirt">
+                                        <img src="./images/sirt-white.png" alt="iron sirt white">
+                                    </div>
+                                    <input type="radio" name="white" class="value-color-sirt">
+                                </li>
+                                <li>
+                                    <div class="sirt">
+                                        <img src="./images/sirt-green.png" alt="iron sirt green">
+                                    </div>
+                                    <input type="radio" name="green" class="value-color-sirt">
+                                </li>
+                                <li>
+                                    <div class="sirt">
+                                        <img src="./images/sirt-yellow.png" alt="iron sirt yellow">
+                                    </div>
+                                    <input type="radio" name="yellow" class="value-color-sirt">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="choose-size">
+                        <div class="size">
+                            <label for="size">CHOOSE YOUR SIZE</label>
+                            <select name="size" class="form-element" id="size">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="quatity">
+                            <label for="quatity">SPECIFY THE QUANTITY</label>
+                            <div class="input">
+                                <button class="minus form-element"><span class="fa fa-minus"></span></button>
+                                <input type="number" class="form-element" name="quantity">
+                                <button class="minus form-element"><span class="fa fa-plus"></span></button>
+                            </div>
+                        </div>
+                        <div class="button-content">
+                            <button class="iron-default-button">ADD</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="next">
+                    <button class="next-button btn-dark">NEXT</button>
+                </div>
+            </div>
+            <div class="purchase">
+                <div class="title">MY PURCHASE</div>
+                <div class="purchase-content">
+                    <ul>
+                        <li>
+                            <img src="./images/sirt-white.png" style="width: 84px;" alt="iron sirt white">
+                            <div class="color-qty-size">
+                                <div class="color">
+                                    <div class="title">COLOR</div>
+                                    <div class="value">WHITE</div>
+                                </div>
+                                <div class="qty">
+                                    <div class="title">QTY</div>
+                                    <div class="value">1</div>
+                                </div>
+                                <div class="size">
+                                    <div class="title">SIZE</div>
+                                    <div class="value">L</div>
+                                </div>
+                            </div>
+                            <div class="sub-total">
+                                <img src="./images/curency.png" alt="nn iron">
+                                <span class="value">150</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="discount">
+                    <div class="title">I have a Discount code</div>
+                    <div class="input-group">
+                        <input type="text" class="input-discount" placeholder="Add the code">
+                        <button class="iron-default-button">APPLY</button>
+                    </div>
+                </div>
+                <div class="calcul">
+                    <ul>
+                        <li>
+                            <div class="title">SUBTOTAL</div>
+                            <div class="value">
+                                <img src="./images/curency.png"  alt="nn iron">
+                                <div class="value-amount">150</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">DELIVERY</div>
+                            <div class="value">
+                                <div class="value-delivery">xxxxxx</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">DICOUNT</div>
+                            <div class="value">
+                                <img src="./images/curency.png"  alt="nn iron">
+                                <div class="value-discount">150</div>
+                            </div>
+                        </li>
+                        <li class="total">
+                            <div class="title">TOTAL</div>
+                            <div class="value">
+                                <img src="./images/curency.png"  alt="nn iron">
+                                <div class="value-total">150</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="payment">
+                        <button class="btn-dark">Proceed to payment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bloc-footer">
+            <div class="top-footer">
+                <div class="part-logo">
+                    <img src="./images/lion.png" alt="iron lion">
+                    <img src="./images/logo.png" alt="iron">
+                    <img src="./images/logo2.png" alt="iron">
+                </div>
+                <div class="part-logo">
+                    <img src="./images/in-association.png" alt="iron lion">
+                </div>
+                <div class="part-logo">
+                    <img src="./images/free-shipping.png" alt="iron lion">
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <section>
+                    <div class="term">
+                        TERMS AND CONDITIONS
+                    </div>
+                    <div>PRIVACY POLICIES</div>
+                </section>
+                <section>
+                    <div>
+                        INGENIUM &copy; ALL RIGHTS RESERVED 
+                    </div>
+                    <div>
+                        <img src="./images/ingenium.png" alt="ingenium">
+                    </div>
+                </section>
+            </div>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>

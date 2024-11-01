@@ -7,9 +7,9 @@
         margin: 152px auto;
         height: 203px;
         overflow: hidden;
-        border: 1px solid red;
+        //border: 1px solid red;
         .number {
-            border: 1px solid green;
+            //border: 1px solid green;
             width: calc(50% - 50px);
             height: 100%;
             display: flex;
@@ -29,10 +29,10 @@
                 }
             }
             > div{
-                border: 1px solid orange;
+                //border: 1px solid orange;
                 height: 100%;
                 .slide-item {
-                    background-color: red;
+                    //background-color: red;
                     height: 100%;
                     display: flex;
                     flex-direction: column;

@@ -2,12 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 
+
 @import 
-    'color',
-    'variable',
-    'typography',
-    'mixins',
-    'base',
+    './color.scss',
+    './variable.scss',
+    './typography.scss',
+    './mixins.scss',
+    './base.scss',
     'element/',
     'bloc/',
     'page/'

@@ -1,12 +1,23 @@
 $light-color : #FFFFFF;
 $dark-color :#262626;
-$primary-color : #005EB8;
+$blue-color : #005EB8;
+$primary-color : $blue-color;
 $yellow-color :#F7CA45;
 $grey-color :#808364;
 $light-blue : rgba(213, 229, 242, 1);
 $light-grey : rgba(217, 217, 217, 1);
 $transparent : rgba(0,0,0,0);
 $label-color : rgba(117, 117, 117, 1);
+
+.main-blue {
+    $primary-color : $blue-color;
+}
+.main-grey {
+    $primary-color : $grey-color;
+}
+.main-yellow {
+    $primary-color : $yellow-color;
+}
 
 
 // linear gradient soratra : 

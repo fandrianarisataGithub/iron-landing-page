@@ -31,10 +31,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        section {
+        .section {
             width: 50%;
             display: flex;
-            
+            text-decoration: none;
+            color: $dark-color;
             &:first-child {
                 justify-content: flex-start;
                 font-size: 14px;

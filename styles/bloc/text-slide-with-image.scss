@@ -22,7 +22,7 @@
         height: 445px;
         z-index: 1;
         .slide-item {
-            animation: slide-left 10s linear infinite;
+            animation: slide-left 5s linear infinite;
             display: flex;
             align-items: center;
             p {
@@ -45,7 +45,7 @@
 }
 @keyframes slide-left {
     0% {
-      transform: translateX(100%); /* Commence à l'extérieur à droite */
+      transform: translateX(0%); /* Commence à l'extérieur à droite */
     }
     100% {
       transform: translateX(-100%); /* Termine à l'extérieur à gauche */

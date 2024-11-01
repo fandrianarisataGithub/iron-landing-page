@@ -22,11 +22,13 @@
         &:after{
             opacity: 1;
             transform: translateY(0) rotateX(0);
+            display: flex;
         }
         
         &:before{
             opacity: 0;
             transform: translateY(50%) rotateX(90deg);
+            display: flex;
         }
     }
     &:after{
@@ -36,7 +38,7 @@
         width: 100%;
         height: 100%;
         border: 1px solid $light-color;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         transition: all $speed ease-in-out;
@@ -44,13 +46,14 @@
         background: $primary-color;
         content: attr(data-back);
         transform: translateY(-50%) rotateX(90deg);
+        color: white;
     }
       
       &:before{
         top: 0;
         left: 0;
         opacity: 1;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         line-height: 40px;
@@ -61,5 +64,6 @@
         transform: translateY(0) rotateX(0);
         width: 100%;
         height: 100%;
+        color: white;
     }
 }

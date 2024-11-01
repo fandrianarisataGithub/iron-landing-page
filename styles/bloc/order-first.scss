@@ -153,6 +153,26 @@
                         width: 163px;
                     }
                 }
+                &-part3 {
+                    >.title {
+                        text-transform: uppercase;
+                    }
+                    .imput-group-pay {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .form-group {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-top: 25px;
+                            .label {
+                                margin-left: 15px;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
             }
             
             .choose-quantity-quality {
@@ -272,13 +292,57 @@
                     }
                 }
             }
+            .form-card {
+                margin-top: 50px;
+                padding-top: 50px;
+                border-top: 1px solid $light-grey;
+                > .title {
+                    margin-bottom: 25px;
+                }
+                form {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .part-form {
+                        width: calc(50% - 25px);
+                        .form-group {
+                            &:not(:first-child) {
+                                margin-top: 5px;
+                            }
+                            label {
+                                font-size: 12px;
+                                line-height: 16.8px;
+                                text-transform: uppercase;
+                            }
+                            input {
+                                &.form-control {
+                                    border: 1px solid $light-grey;
+                                    border-radius: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .accept-card {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 50px;
+                .card-type {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 277px;
+                }
+            }
             .next {
                 margin-top: 50px;
                 border-top: 1px solid $light-grey;
                 padding-top: 50px;
                 display: flex;
                 justify-content: flex-end;
-                >button {
+                >a {
                     &:last-child {
                         margin-left: 25px;
                     }

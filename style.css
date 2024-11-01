@@ -247,10 +247,12 @@ main > div:not(.header-fixed, .bloc-recommandation) {
 .primary-button:hover:after {
   opacity: 1;
   transform: translateY(0) rotateX(0);
+  display: flex;
 }
 .primary-button:hover:before {
   opacity: 0;
   transform: translateY(50%) rotateX(90deg);
+  display: flex;
 }
 .primary-button:after {
   top: 0;
@@ -259,7 +261,7 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   width: 100%;
   height: 100%;
   border: 1px solid #FFFFFF;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease-in-out;
@@ -267,12 +269,13 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   background: #005EB8;
   content: attr(data-back);
   transform: translateY(-50%) rotateX(90deg);
+  color: white;
 }
 .primary-button:before {
   top: 0;
   left: 0;
   opacity: 1;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   line-height: 40px;
@@ -283,6 +286,7 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   transform: translateY(0) rotateX(0);
   width: 100%;
   height: 100%;
+  color: white;
 }
 
 .btn-dark {
@@ -326,8 +330,8 @@ main > div:not(.header-fixed, .bloc-recommandation) {
 }
 .bloc-header .sub-container h3 {
   margin-top: 51px;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 20px;
   text-transform: uppercase;
   color: #262626;
 }
@@ -549,9 +553,10 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   align-items: center;
   margin: 152px 0;
   scrollbar-width: none;
+  position: relative;
 }
 .bloc-text-slide .slide-item {
-  animation: slide-left 10s linear infinite;
+  animation: slide-left 5s linear infinite;
   display: flex;
   align-items: center;
 }
@@ -574,11 +579,11 @@ main > div:not(.header-fixed, .bloc-recommandation) {
 }
 
 @keyframes slide-left {
-  0% {
-    transform: translateX(100%); /* Commence à l'extérieur à droite */
+  from {
+    transform: translateX(0); /* Commence à l'extérieur à droite */
   }
-  100% {
-    transform: translateX(-100%); /* Termine à l'extérieur à gauche */
+  to {
+    transform: translateX(-50%); /* Termine à l'extérieur à gauche */
   }
 }
 .bloc-animate-vertical {
@@ -663,9 +668,37 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   justify-content: space-between;
   width: 100%;
   margin: 152px auto;
+  height: 203px;
+  overflow: hidden;
+  border: 1px solid red;
 }
-.bloc-choose-your-size .top-section .number img {
-  display: block;
+.bloc-choose-your-size .top-section .number {
+  border: 1px solid green;
+  width: calc(50% - 50px);
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.bloc-choose-your-size .top-section .number:first-child {
+  font-size: 203px;
+  line-height: 181px;
+  font-weight: 800;
+  color: #005EB8;
+}
+.bloc-choose-your-size .top-section .number:last-child > div.fixed-on {
+  display: none;
+}
+.bloc-choose-your-size .top-section .number > div {
+  border: 1px solid orange;
+  height: 100%;
+}
+.bloc-choose-your-size .top-section .number > div .slide-item {
+  background-color: red;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .bloc-choose-your-size .top-section > img {
   display: block;
@@ -713,7 +746,7 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   z-index: 1;
 }
 .bloc-text-slide-with-image .text-to-flex .slide-item {
-  animation: slide-left 10s linear infinite;
+  animation: slide-left 5s linear infinite;
   display: flex;
   align-items: center;
 }
@@ -735,7 +768,7 @@ main > div:not(.header-fixed, .bloc-recommandation) {
 
 @keyframes slide-left {
   0% {
-    transform: translateX(100%); /* Commence à l'extérieur à droite */
+    transform: translateX(0%); /* Commence à l'extérieur à droite */
   }
   100% {
     transform: translateX(-100%); /* Termine à l'extérieur à gauche */
@@ -1003,6 +1036,24 @@ main > div:not(.header-fixed, .bloc-recommandation) {
 .bloc-order-first > div.place-an-order .content-part2 .free-shipping {
   width: 163px;
 }
+.bloc-order-first > div.place-an-order .content-part3 > .title {
+  text-transform: uppercase;
+}
+.bloc-order-first > div.place-an-order .content-part3 .imput-group-pay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bloc-order-first > div.place-an-order .content-part3 .imput-group-pay .form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+.bloc-order-first > div.place-an-order .content-part3 .imput-group-pay .form-group .label {
+  margin-left: 15px;
+  text-transform: uppercase;
+}
 .bloc-order-first > div.place-an-order .choose-quantity-quality {
   margin-top: 50px;
   border-top: 1px solid rgb(217, 217, 217);
@@ -1105,6 +1156,46 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   border: 1px solid rgb(217, 217, 217);
   border-radius: 0;
 }
+.bloc-order-first > div.place-an-order .form-card {
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px solid rgb(217, 217, 217);
+}
+.bloc-order-first > div.place-an-order .form-card > .title {
+  margin-bottom: 25px;
+}
+.bloc-order-first > div.place-an-order .form-card form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bloc-order-first > div.place-an-order .form-card form .part-form {
+  width: calc(50% - 25px);
+}
+.bloc-order-first > div.place-an-order .form-card form .part-form .form-group:not(:first-child) {
+  margin-top: 5px;
+}
+.bloc-order-first > div.place-an-order .form-card form .part-form .form-group label {
+  font-size: 12px;
+  line-height: 16.8px;
+  text-transform: uppercase;
+}
+.bloc-order-first > div.place-an-order .form-card form .part-form .form-group input.form-control {
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 0;
+}
+.bloc-order-first > div.place-an-order .accept-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+.bloc-order-first > div.place-an-order .accept-card .card-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 277px;
+}
 .bloc-order-first > div.place-an-order .next {
   margin-top: 50px;
   border-top: 1px solid rgb(217, 217, 217);
@@ -1112,7 +1203,7 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   display: flex;
   justify-content: flex-end;
 }
-.bloc-order-first > div.place-an-order .next > button:last-child {
+.bloc-order-first > div.place-an-order .next > a:last-child {
   margin-left: 25px;
 }
 .bloc-order-first > div.purchase {

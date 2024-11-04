@@ -43,6 +43,7 @@
         }
         >.devant {
             position: relative;
+            overflow: hidden;
             > span {
                 display: block;
                 position: absolute;
@@ -54,9 +55,31 @@
                 font-size: 12px;
                 font-weight: 700;
             }
-            > img {
+            .background-image-face {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: all 0.8s ease-in-out;
                 width: 100%;
+                height: auto;
+                background-position-y: 30px;
+                > img {
+                    width: 100%;
+                    position: relative;
+                    transform: scale(1.15);
+                    transition: top 0.8s ease-in-out;
+                    top: -47px;
+                }
+                &:hover {
+                    transition: all 0.8s ease-in-out;
+                    background-position-y: -40px;
+                    > img {
+                        top: -30px;
+                        transition: top 0.8s ease-in-out;
+                    }
+                }
             }
+            
         }
         .dos {
             position: relative;
@@ -71,8 +94,24 @@
                 font-size: 12px;
                 font-weight: 700;
             }
-            > img {
-                width: 100%;
+            .background-dos {
+                background-color: $primary-color;
+                overflow: hidden;
+                
+                > img {
+                    width: 100%;
+                    transform: scale(1.35);
+                    transition: all .8s ease-in-out;
+                    position: relative;
+                    top: 0;
+                }
+                &:hover {
+                    > img {
+                        position: relative;
+                        top: 50px;
+                        transition: all .8s ease-in-out;
+                    }
+                }
             }
         }
         .epaul-devant {

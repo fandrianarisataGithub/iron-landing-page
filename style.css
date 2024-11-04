@@ -60,6 +60,7 @@ main .header-left .vertical-position p {
   display: inline-block;
   margin-bottom: 0;
   margin-top: 0;
+  text-transform: uppercase;
 }
 main .header-left .vertical-position .square-container {
   display: flex;
@@ -172,6 +173,7 @@ main .header-right .vertical-position p {
   display: inline-block;
   margin-bottom: 0;
   margin-top: 0;
+  text-transform: uppercase;
 }
 main .header-right .vertical-position .square-container {
   display: flex;
@@ -375,6 +377,7 @@ main > div:not(.header-fixed, .bloc-recommandation) {
 }
 .bloc-pose .list-images > .devant {
   position: relative;
+  overflow: hidden;
 }
 .bloc-pose .list-images > .devant > span {
   display: block;
@@ -387,8 +390,29 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   font-size: 12px;
   font-weight: 700;
 }
-.bloc-pose .list-images > .devant > img {
+.bloc-pose .list-images > .devant .background-image-face {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.8s ease-in-out;
   width: 100%;
+  height: auto;
+  background-position-y: 30px;
+}
+.bloc-pose .list-images > .devant .background-image-face > img {
+  width: 100%;
+  position: relative;
+  transform: scale(1.15);
+  transition: top 0.8s ease-in-out;
+  top: -47px;
+}
+.bloc-pose .list-images > .devant .background-image-face:hover {
+  transition: all 0.8s ease-in-out;
+  background-position-y: -40px;
+}
+.bloc-pose .list-images > .devant .background-image-face:hover > img {
+  top: -30px;
+  transition: top 0.8s ease-in-out;
 }
 .bloc-pose .list-images .dos {
   position: relative;
@@ -404,8 +428,21 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   font-size: 12px;
   font-weight: 700;
 }
-.bloc-pose .list-images .dos > img {
+.bloc-pose .list-images .dos .background-dos {
+  background-color: #005EB8;
+  overflow: hidden;
+}
+.bloc-pose .list-images .dos .background-dos > img {
   width: 100%;
+  transform: scale(1.35);
+  transition: all 0.8s ease-in-out;
+  position: relative;
+  top: 0;
+}
+.bloc-pose .list-images .dos .background-dos:hover > img {
+  position: relative;
+  top: 50px;
+  transition: all 0.8s ease-in-out;
 }
 .bloc-pose .list-images .epaul-devant {
   display: flex;

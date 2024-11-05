@@ -1,6 +1,9 @@
 .bloc-footer {
     margin: 152px auto 50px;
     width: 1116px;
+    @include respond-to(macbook) {
+        width: 925px;
+    }
     .top-footer {
         display: flex;
         justify-content: space-between;

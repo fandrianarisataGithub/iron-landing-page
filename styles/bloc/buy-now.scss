@@ -4,10 +4,26 @@
         width: 620px;
         margin: 50px auto;
     }
-    .text-150 {
+    .text {
         display: flex;
         justify-content: center;
         align-items: center;
+        color: $primary-color;
+        .curency {
+            font-size: 36px;
+            line-height: 46.8px;
+            font-weight: 700;
+            display: block;
+            position: relative;
+            top: 5px;
+            right: 5px;
+        }
+        .value {
+            font-size: 64px;
+            line-height: 83.2px;
+            font-weight: 700;
+            display: block;
+        }
     }
     .description-fine {
         text-align: center;

@@ -5,6 +5,7 @@
     margin: 152px 0;
     scrollbar-width: none;
     position: relative;
+    color: $primary-color;
     .slide-item {
         animation: slide-left 5s linear infinite;
         display: flex;
@@ -14,7 +15,6 @@
             line-height: 46.8px;
             text-transform: uppercase;
             font-weight: 800;
-            color: $primary-color;
             margin:0 15px;
             white-space: nowrap;
             display: inline-block;

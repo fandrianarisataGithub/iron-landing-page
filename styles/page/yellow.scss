@@ -1,0 +1,88 @@
+
+.page-yellow {
+    $yellow-color : $yellow-color;
+    $light-green : #E2E3D9;
+    .bloc-header {
+        h1, h2 {
+            color: $yellow-color;
+        }
+    }
+    .bloc-pose .list-images .dos .background-back,
+    .bloc-pose .list-images .epaul-devant .cover > div,
+    .bloc-pose .list-images .epaul-devant .cover > div
+    {
+        background-color: $yellow-color;
+    }
+    .bloc-support-us {
+        .percent-text {
+            .section-rates {
+                .content, span {
+                    color: $yellow-color;
+                }
+            }
+            .paragraph {
+                p {
+                    color: $yellow-color;
+                }
+            }
+        }
+        &:hover {
+            .percent-text {
+                .section-rates {
+                    .content {
+                        .before-hidden {
+                            color: $light-green;
+                        }
+                        .after-hidden {
+                            color: $light-green;
+                        }
+                    }
+                }   
+                .paragraph {
+                    p  {
+                        color: $light-green;
+                    }
+                }      
+            }
+        }
+    }
+    .bloc-support-us .rebirth-support > div .number {
+        color: $yellow-color;
+    }
+    .bloc-text-slide {
+        color: $yellow-color;
+    }
+    .bloc-text-slide-with-image {
+        color: $yellow-color;
+    }
+    .bloc-buy-now .text {
+        color: $yellow-color;
+    }
+    .bloc-buy-now .description-strong {
+        color: $yellow-color;
+    }
+    .primary-button {
+        background-color: $yellow-color;
+    }
+    .bloc-join-now .title {
+        color: $yellow-color;
+    }
+    .header-left {
+        .vertical-position .square-container .square {
+            &:last-child {
+                &::after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    left: -3px;
+                    top: -3px;
+                    width: 24px;
+                    height: 24px; 
+                    background-color: transparent;
+                    border: 1px solid $yellow-color;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}

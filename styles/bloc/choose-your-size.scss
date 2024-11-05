@@ -56,9 +56,19 @@
     .sirt {
         margin: 152px auto;
         width: 100%;
-        img {
-            display: block;
+        height: 686px;
+        overflow: hidden;
+        .cover {
+            background-size: cover;
             width: 100%;
+            height: 100%;
+            background-position-y: 0px;
+            transition: background-position-y 1s ease-in-out;
+            background-repeat: no-repeat;
+            &:hover {
+                background-position-y: -20px;
+                transition: background-position-y 1s ease-in-out;
+            }
         }
     }
 }

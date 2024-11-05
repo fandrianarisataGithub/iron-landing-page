@@ -1,0 +1,20 @@
+.page-white {
+    .header-left {
+        .vertical-position .square-container .square {
+            &:nth-child(1) {
+                &::after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    left: -3px;
+                    top: -3px;
+                    width: 24px;
+                    height: 24px; 
+                    background-color: transparent;
+                    border: 1px solid $blue-color;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}

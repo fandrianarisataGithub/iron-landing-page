@@ -1,16 +1,19 @@
 .bloc-text-slide-with-image {
     margin: 152px 0;
+    color: $primary-color;
     .image-center {
-        width: 752px;
-        height: 445px;
+        $width : 752px;
+        $height: 445px;
+        width: $width;
+        height: $height;
         margin: auto;
         position: absolute;
         z-index: 2;
-        left: calc(752px / 2);
+        left: calc($width / 2);
         img {
             position: absolute;
             top: 0;
-            left: -75px;
+            left: calc(calc($width / 10) * -2);
             width : 100%
         };
     }
@@ -30,7 +33,6 @@
                 line-height: 98.58px;
                 text-transform: uppercase;
                 font-weight: 800;
-                color: $primary-color;
                 margin:0 15px;
                 white-space: nowrap;
                 display: inline-block;

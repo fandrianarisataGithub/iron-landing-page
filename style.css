@@ -428,18 +428,18 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   font-size: 12px;
   font-weight: 700;
 }
-.bloc-pose .list-images .dos .background-dos {
+.bloc-pose .list-images .dos .background-back {
   background-color: #005EB8;
   overflow: hidden;
 }
-.bloc-pose .list-images .dos .background-dos > img {
+.bloc-pose .list-images .dos .background-back > img {
   width: 100%;
   transform: scale(1.35);
   transition: all 0.8s ease-in-out;
   position: relative;
   top: 0;
 }
-.bloc-pose .list-images .dos .background-dos:hover > img {
+.bloc-pose .list-images .dos .background-back:hover > img {
   position: relative;
   top: 50px;
   transition: all 0.8s ease-in-out;
@@ -448,13 +448,41 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   display: flex;
   justify-content: space-between;
 }
-.bloc-pose .list-images .epaul-devant > div {
+.bloc-pose .list-images .epaul-devant .cover {
   width: calc(50% - 12.5px);
+}
+.bloc-pose .list-images .epaul-devant .cover > div {
   display: flex;
   flex-direction: column;
   position: relative;
+  background-color: #005EB8;
+  overflow: hidden;
 }
-.bloc-pose .list-images .epaul-devant > div > span {
+.bloc-pose .list-images .epaul-devant .cover > div.background-chest > img {
+  width: 100%;
+  transform: scale(1.04);
+  position: relative;
+  left: 0;
+  transition: left 0.8s ease-in-out;
+}
+.bloc-pose .list-images .epaul-devant .cover > div.background-chest:hover > img {
+  position: relative;
+  left: 10px;
+  transition: left 0.8s ease-in-out;
+}
+.bloc-pose .list-images .epaul-devant .cover > div.background-shoulder > img {
+  width: 100%;
+  transform: scale(1.04);
+  position: relative;
+  right: 0;
+  transition: right 0.8s ease-in-out;
+}
+.bloc-pose .list-images .epaul-devant .cover > div.background-shoulder:hover img {
+  position: relative;
+  right: 10px;
+  transition: right 0.8s ease-in-out;
+}
+.bloc-pose .list-images .epaul-devant .cover > span {
   display: block;
   text-transform: uppercase;
   line-height: 15.6px;
@@ -462,10 +490,7 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   font-weight: 700;
   margin-top: 15px;
 }
-.bloc-pose .list-images .epaul-devant > div > img {
-  width: 100%;
-}
-.bloc-pose .list-images .epaul-devant > div:last-child span {
+.bloc-pose .list-images .epaul-devant .cover:last-child span {
   text-align: end;
 }
 

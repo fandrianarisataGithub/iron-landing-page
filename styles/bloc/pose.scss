@@ -94,7 +94,7 @@
                 font-size: 12px;
                 font-weight: 700;
             }
-            .background-dos {
+            .background-back {
                 background-color: $primary-color;
                 overflow: hidden;
                 
@@ -117,11 +117,47 @@
         .epaul-devant {
             display: flex;
             justify-content: space-between;
-            > div {
+            .cover {
                 width: calc(50% - 12.5px);
-                display: flex;
-                flex-direction: column;
-                position: relative;
+                > div {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    background-color:$primary-color;
+                    overflow: hidden;
+                    &.background-chest {
+                        > img {
+                            width: 100%;
+                            transform: scale(1.04);
+                            position: relative;
+                            left: 0;
+                            transition: left 0.8s ease-in-out;
+                        }
+                        &:hover {
+                            > img {
+                                position: relative;
+                                left: 10px;
+                                transition: left 0.8s ease-in-out;
+                            }
+                        }
+                    }
+                    &.background-shoulder {
+                        > img {
+                            width: 100%;
+                            transform: scale(1.04);
+                            position: relative;
+                            right: 0;
+                            transition: right 0.8s ease-in-out;
+                        }
+                        &:hover {
+                            img {
+                                position: relative;
+                                right: 10px;
+                                transition: right 0.8s ease-in-out;
+                            }
+                        }
+                    }
+                }
                 > span {
                     display: block;
                     text-transform: uppercase;
@@ -129,9 +165,6 @@
                     font-size: 12px;
                     font-weight: 700;
                     margin-top: 15px;
-                }
-                > img {
-                    width: 100%;
                 }
                 &:last-child {
                     span {

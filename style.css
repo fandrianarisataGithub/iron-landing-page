@@ -548,9 +548,9 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 100px;
   position: relative;
-  transition: all 1s ease-in-out;
+  left: 100px;
+  transition: left 1s ease-in-out;
 }
 .bloc-support-us .percent-text .paragraph p {
   font-size: 24px;
@@ -606,8 +606,8 @@ main > div:not(.header-fixed, .bloc-recommandation) {
   color: rgb(213, 229, 242);
 }
 .bloc-support-us:hover .percent-text .paragraph {
-  margin-left: 0px;
-  transition: all 1s ease-in-out;
+  left: 0px;
+  transition: left 1s ease-in-out;
 }
 .bloc-support-us:hover .percent-text .paragraph p {
   color: #005EB8;

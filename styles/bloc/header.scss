@@ -13,11 +13,19 @@
         }
         h2 {
             margin-top: 51px;
-            font-weight: 36px;
+            font-size: 36px;
             line-height: 46.8px;
             color: $primary-color;
             font-weight: 800;
             text-transform: uppercase;
+            @include respond-to(xlarge) {
+                font-size: 30px;
+                line-height: 32px;
+            }
+            @include respond-to(medium) {
+                font-size: 20px;
+                line-height: 26px;
+            }
         }
         h3 {
             margin-top: 51px;
@@ -25,6 +33,9 @@
             line-height: 20px;
             text-transform: uppercase;
             color: $dark-color;
+            @include respond-to(medium) {
+                width: 392px;
+            }
         }
     }
 }

@@ -4,6 +4,9 @@
     width: 964px;
     position: relative;
     margin : 150px auto;
+    @include respond-to(medium) {
+        margin : 50px auto 70px;
+    }
     p {
         font-size: 36px;
         line-height: 46.8px;
@@ -11,13 +14,20 @@
         color: $light-blue;
         text-transform: uppercase;
         font-weight: 700;
+        display: flex;
+        align-items: center;
+        @include respond-to(large) {
+            font-size: 24px;
+            line-height: 25px;
+            
+        }
     }
     img {
         position: absolute;
         display: block;
         width: 30px;
         height: 30px;
-        left: calc(964px / 2 - 15px);
+        left: calc(50% - 15px);
         top: calc(282px / 2 - 15px);
         transition: all 1s ease-in-out;
     }
@@ -25,6 +35,9 @@
         img {
             &:first-child {
                 top: -100px;
+                @include respond-to(medium) {
+                    top: -70px;
+                }
             }
             &:last-child {
                 top: 296px;

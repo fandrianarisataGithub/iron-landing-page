@@ -4,6 +4,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include respond-to(medium) {
+        margin: 52px auto;
+        width: 393px;
+    }
     .img-icon {
         display: block;
         margin: 50px auto;
@@ -15,12 +19,22 @@
             font-weight: 700;
             text-align: center;
             text-transform: uppercase;
+            @include respond-to(medium) {
+                text-align: center;
+                font-size: 20px;
+                line-height: 26px;
+            }
+        }
+        @include respond-to(medium) {
+            text-align: center;
+            font-size: 20px;
+            line-height: 26px;
         }
     }
     .auteur {
         margin-top : 50px;
         text-transform: uppercase;
         font-size: 16px;
-            line-height: 20.8px;
+        line-height: 20.8px;
     }
 }

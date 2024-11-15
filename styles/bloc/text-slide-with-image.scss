@@ -1,6 +1,10 @@
 .bloc-text-slide-with-image {
     margin: 152px 0;
     color: $primary-color;
+    z-index: -1;
+    @include respond-to(medium) {
+        margin: 52px 0;
+    }
     .image-center {
         $width : 752px;
         $height: 445px;
@@ -9,12 +13,20 @@
         margin: auto;
         position: absolute;
         z-index: 2;
-        left: calc($width / 2);
+        left: calc(50% - 376px);
+        @include respond-to(medium) {
+            width: 100%;
+            left: 0;
+        }
         img {
             position: absolute;
             top: 0;
-            left: calc(calc($width / 10) * -2);
-            width : 100%
+            left: calc(50% - 376px);
+            width : 100%;
+            @include respond-to(medium) {
+                width: 100%;
+                left: 0;
+            }
         };
     }
     .text-to-flex {
@@ -36,12 +48,21 @@
                 margin:0 15px;
                 white-space: nowrap;
                 display: inline-block;
+                @include respond-to(medium) {
+                    font-size: 24px;
+                    line-height: 31px;
+                }
             }
             img {
                 width: 79.77px;
                 height: 45.26px;
                 position: relative;
-                transform: rotate(145deg);
+                transform: rotate(140deg);
+                top: -10px;
+                @include respond-to(medium) {
+                    width: 35px;
+                    height: 25px;
+                }
             }
         }
     }

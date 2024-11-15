@@ -1,0 +1,67 @@
+.page-order_step2 {
+    .content-part2 {
+        @include respond-to(macbook) {
+            display: flex;
+            flex-direction: column;
+        }
+        .choice-delivery {
+            
+            > div {
+                &:last-child {
+                    
+                    @include respond-to(macbook) {
+                        margin-top: 25px;
+                    }
+                }
+        
+                .value-item-value {
+                    
+                    @include respond-to(macbook) {
+                        font-size: 12px;
+                        line-height: 16px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        .free-shipping {
+           @include respond-to(macbook) {
+                margin-top: 25px;
+           }
+        }
+    }
+    .bloc-order-first > div.place-an-order .content-part2 .choice-delivery .choice-item .form-item .text {
+        @include respond-to(large) {
+            width: 150px;
+            height: auto;
+            > div {
+                max-width: 120px;
+            }
+        }
+        @include respond-to(medium) {
+            width: auto;
+            margin-left: 25px;
+            height: auto;
+            > div {
+                max-width: 300px;
+            }
+        }
+    }
+    .bloc-order-first > div.place-an-order .content-part2 .choice-delivery .choice-item .value-item > .value-item-value {
+        @include respond-to(macbook) {
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 700;
+        }
+    }
+    .bloc-order-first > div.place-an-order .content-part2 .choice-delivery {
+        @include respond-to(medium) {
+            width: 100%;
+        }
+        .text {
+            @include respond-to(medium) {
+                margin-left: 25px;
+            }
+        }
+    }
+}

@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 152px auto;
+    
     .title {
         width: 282px;
         height: 94px;
@@ -11,6 +12,11 @@
         color: $dark-color;
         font-weight: 800;
         text-transform: uppercase;
+        @include respond-to(medium) {
+            font-size: 20px;
+            line-height: 26px;
+            width: 268px;
+        }
     }
     .response {
         width: 121px;
@@ -18,5 +24,15 @@
         line-height: 15.6px;
         font-weight: 700;
         text-transform: uppercase;
+    }
+    @include respond-to(medium) {
+        margin : 52px auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        >div {
+            width: 100%;
+            text-align: center;
+        }
     }
 }

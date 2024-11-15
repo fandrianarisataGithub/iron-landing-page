@@ -1,0 +1,142 @@
+.bloc-mobile-header {
+    display: none;
+    height: 140px;
+    width: 100%;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid $dark-color;
+    padding: 0 25px;
+    background-color: $light-color;
+    @include respond-to(medium) {
+        display: flex;
+        align-items: center;
+    }
+    .lion {
+        width: 60.7px;
+        height: 60.7px;
+    }
+    .logo2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img {
+            width: 60.7px;
+            height: 60.7px;
+        }
+    }
+    .vertical-position {
+        height: 100%;
+        width: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .text-vertical {
+            text-align: center;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 14.4px;
+            text-transform: uppercase;
+            width: 96px;
+            margin: 0px auto 26.3px;
+        }
+        .square-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .square {
+                width: 26.3px;
+                height: 26.3px;
+                position: relative;
+                &:not(:last-child) {
+                    margin-right: 26.3px;
+                }
+                &:first-child {
+                    background-color: $primary-color;
+                    
+                    &:hover {
+                        cursor: pointer;
+                        position: relative;
+                        z-index: 20;
+                        &::after {
+                            display: block;
+                            content: "";
+                            position: absolute;
+                            left: -3px;
+                            top: -3px;
+                            width: 32.3px;
+                            height: 32.3px; 
+                            background-color: transparent;
+                            border: 1px solid $primary-color;
+                            z-index: 1;
+                        }
+                    }
+                }
+                &:last-child {
+                    background-color: $yellow-color;
+                    &:hover {
+                        cursor: pointer;
+                        position: relative;
+                        z-index: 20;
+                        &::after {
+                            display: block;
+                            content: "";
+                            position: absolute;
+                            left: -3px;
+                            top: -3px;
+                            width: 32.3px;
+                            height: 32.3px; 
+                            background-color: transparent;
+                            border: 1px solid $yellow-color;
+                            z-index: 1;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    background-color: $grey-color;
+                    &:hover {
+                        cursor: pointer;
+                        position: relative;
+                        z-index: 20;
+                        &::after {
+                            display: block;
+                            content: "";
+                            position: absolute;
+                            left: -3px;
+                            top: -3px;
+                            width: 32.3px;
+                            height: 32.3px; 
+                            background-color: transparent;
+                            border: 1px solid $grey-color;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+            .whatsapp {
+                padding-left: 15px;
+                &::before {
+                    display: block;
+                    content: "";
+                    width : 1px;
+                    height: 35px;
+                    background-color: $dark-color;
+                   position: relative;
+                   top: 18px;
+                }
+                img {
+                    width: 33.12px;
+                    height: 33.12px;
+                    position: relative;
+                    left: 17px;
+                    bottom: 17px;
+                }
+                
+            }
+        }
+    }
+    
+}

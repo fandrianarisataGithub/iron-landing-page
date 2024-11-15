@@ -14,4 +14,11 @@
     outline: none;
     border: 1px solid $dark-color;
     text-decoration: none;
+    &:disabled {
+        background-color: #bdc3c7; /* Couleur grise pour indiquer un état désactivé */
+        color: #7f8c8d; /* Couleur du texte adoucie */
+        cursor: not-allowed; /* Changement de curseur */
+        opacity: 0.6; /* Légère transparence */
+        border-color: #bdc3c7;
+    }
 }

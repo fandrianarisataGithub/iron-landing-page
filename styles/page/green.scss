@@ -1,6 +1,6 @@
+$green-color : $grey-color;
+$light-green : #E2E3D9;
 .page-green {
-    $green-color : $grey-color;
-    $light-green : #E2E3D9;
     .bloc-header {
         h1, h2 {
             color: $grey-color;
@@ -60,9 +60,7 @@
     .bloc-buy-now .description-strong {
         color: $green-color;
     }
-    .primary-button {
-        background-color: $green-color;
-    }
+    
     .bloc-join-now .title {
         color: $green-color;
     }
@@ -84,4 +82,53 @@
             }
         }
     }
+    .bloc-animate-vertical {
+        p {
+            color: $light-green;
+        }
+        &:hover {
+            p {
+                color: $dark-color
+            }
+        }
+
+    }
+    .bloc-choose-your-size .top-section .number:first-child {
+        color: $green-color;
+    }
+    .bloc-support-us .percent-text .paragraph p {
+        @include respond-to (medium) {
+            color: $green-color;
+        }
+    }
+    .primary-button {
+        background-color: $green-color;
+        &:hover {
+            background-color: $green-color !important;
+        }
+    }
+    .btn-flip {
+        background-color: $green-color;
+        color: $light-color;
+        &:after {
+            background-color: $green-color;
+            color: $light-color;
+        }
+        &:before {
+            background-color: $green-color;
+            color: $light-color;
+        }
+    }
+}
+.bloc-mobile-header.green .vertical-position .square-container .square:nth-child(2)::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    width: 32.3px;
+    height: 32.3px; 
+    background-color: transparent;
+    border: 1px solid $green-color;
+    z-index: 1;
 }

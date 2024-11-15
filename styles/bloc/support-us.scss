@@ -1,20 +1,37 @@
 .bloc-support-us {
     margin-top: 152px;
+    @include respond-to(medium) {
+        margin-top: 52px;
+    }
     .fs2 {
         font-weight: 800;
         text-align: center;
+        @include respond-to(medium) {
+            width: 294px;
+            display: block;
+            text-align: center;
+            margin: auto;
+        }
     }
     .percent-text {
         margin: 152px 0;
         display: flex;
         justify-content: center;
         align-items: center;
+        @include respond-to(medium) {
+            flex-direction: column;
+            margin: 52px 0;
+        }
         .section-rates {
             width: calc(50% - 100px);
             display: flex;
             align-items: center;
             justify-content: flex-start;
             position: relative;
+            @include respond-to(medium) {
+               width: 100%;
+               justify-content: center;
+            }
             .content {
                 font-size: 266.45px;
                 line-height: 266.45px;
@@ -35,6 +52,10 @@
                     position: relative;
                     z-index: 1;
                 }
+                @include respond-to(xlarge) {
+                    font-size: 186px;
+                    line-height: 186px;
+                }
             }
             span {
                 font-size: 80px;
@@ -42,6 +63,10 @@
                 color: $primary-color;
                 margin-left: 25px;
                 margin-top: 40px;
+                @include respond-to(xlarge) {
+                    font-size: 64px;
+                    line-height: 64px;
+                }
             }
         }
         .paragraph {
@@ -53,11 +78,21 @@
             position: relative;
             left: 100px;
             transition: left 1s ease-in-out;
+            @include respond-to(medium) {
+                left: 0;
+                margin-top: 100px;
+                text-align: center;
+            }
             p  {
                 font-size: 24px;
                 line-height: 31.2px;
                 text-transform: uppercase;
                 color: $light-blue;
+                @include respond-to(medium) {
+                    font-size: 20px;
+                    line-height: 26px;
+                    color: $blue-color;
+                }
             }
         }
         
@@ -66,10 +101,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include respond-to(medium) {
+            flex-direction: column;
+        }
         > div {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            @include respond-to(medium) {
+                width: 100%;
+            }
             .number {
                 display: block;
                 width: 100px;
@@ -85,6 +126,7 @@
                 }
                 .title {
                     font-size: 20px;
+                    line-height: 26px;
                     margin-top: 40px;
                     color: $dark-color;
                     text-transform: uppercase;
@@ -113,11 +155,27 @@
                         transition: all 1s ease-in-out;
                         color: $light-blue;
                     }
+                    @include respond-to(xlarge) {
+                        .before-hidden {
+                            top: -90px;
+                            
+                        }
+                        .after-hidden {
+                            top: 90px;
+                            
+                        }
+                    }
                 }
             }   
             .paragraph {
                 left: 0px;
                 transition: left 1s ease-in-out;
+                @include respond-to(xlarge) {
+                    left: 25px;
+                }
+                @include respond-to(medium) {
+                    left: 0px;
+                }
                 p  {
                     color: $primary-color;
                 }

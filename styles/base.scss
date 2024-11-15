@@ -6,27 +6,30 @@ body {
 main {
     padding: 0;
     position: relative;
-    width: 1371.5px;
     margin-left: auto;
     margin-right: auto;
-    @include respond-to(macbook) {
-        width: 1200px;
-    }
+    overflow-x: hidden;
     .base-section-first {
         height: 100vh;
         width: 100%;
+        @include respond-to(medium) {
+            height: auto;
+            margin-top: 262px;
+        }
     }
     .header-left {
         position: fixed;
         top:50px;
         //left: 50px;
-        left: calc(calc((100% - $maxMainWidth) / 2) + 25px);
-        @include respond-to(macbook) {
-            $maxMainWidth : 1200px;
-            left: calc(calc((100% - $maxMainWidth) / 2) + 25px);
-        }
+        left: 50px;
         display: flex;
         flex-direction: column;
+        @include respond-to(macbook) {
+            $maxMainWidth : 1200px;
+        }
+        @include respond-to(medium) {
+            display: none;
+        }
         img {
             display: block;
             width: 60.7px;
@@ -55,11 +58,13 @@ main {
                 justify-content: space-between;
                 position: relative;
                 bottom: 2.5px;
+                z-index: 100;
                 .square {
                     width: 18px;
                     height: 18px;
                     margin-top: 5px;
                     position: relative;
+                    z-index: 1000;;
                     &:not(:last-child) {
                         margin-right: 10px;
                     }
@@ -131,10 +136,12 @@ main {
     .header-right {
         position: fixed;
         top: 50px;
-        right: calc(calc((100% - $maxMainWidth) / 2) + 25px);
+        right: 50px;
         @include respond-to(macbook) {
             $maxMainWidth : 1200px;
-            right: calc(calc((100% - $maxMainWidth) / 2) + 25px);
+        }
+        @include respond-to(medium) {
+            display: none;
         }
         img {
             display: block;
@@ -220,13 +227,25 @@ main {
     >div {
         &:not(.header-fixed, .bloc-recommandation) {
            
-            width: 1116px;
+            width: 1371.5px;
             margin-left: auto;
             margin-right: auto;
             @include respond-to(macbook) {
-                width: 992px;
+                width: 925px;
+            }
+            @include respond-to(xlarge) {
+                width: 768px;
+            }
+
+            @include respond-to(large) {
+                width: 620px;
+            }
+            @include respond-to(medium) {
+                width: 393px;
             }
         }
     }
-    
+    &:not(.active) {
+        overflow-y: hidden;
+    }
 }

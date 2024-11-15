@@ -1,5 +1,8 @@
 .bloc-policy{
     margin-top: 150px;
+    @include respond-to(medium) {
+        margin-top: 52px;
+    }
     >h1 {
         font-size: 32px;
         line-height: 41.6px;

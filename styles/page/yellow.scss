@@ -1,7 +1,6 @@
-
+$yellow-color : $yellow-color;
+$light-yellow : rgba(244, 185, 11, 0.4);
 .page-yellow {
-    $yellow-color : $yellow-color;
-    $light-green : #E2E3D9;
     .bloc-header {
         h1, h2 {
             color: $yellow-color;
@@ -31,16 +30,16 @@
                 .section-rates {
                     .content {
                         .before-hidden {
-                            color: $light-green;
+                            color: $light-yellow;
                         }
                         .after-hidden {
-                            color: $light-green;
+                            color: $light-yellow;
                         }
                     }
                 }   
                 .paragraph {
                     p  {
-                        color: $light-green;
+                        color: $light-yellow;
                     }
                 }      
             }
@@ -63,6 +62,9 @@
     }
     .primary-button {
         background-color: $yellow-color;
+        &:hover {
+            background-color: $yellow-color !important;
+        }
     }
     .bloc-join-now .title {
         color: $yellow-color;
@@ -85,4 +87,47 @@
             }
         }
     }
+    .bloc-animate-vertical {
+        p {
+            color: $light-yellow
+        }
+        &:hover {
+            p {
+                color: $dark-color
+            }
+        }
+
+    }
+    .bloc-choose-your-size .top-section .number:first-child {
+        color: $yellow-color;
+    }
+    .bloc-support-us .percent-text .paragraph p {
+        @include respond-to (medium) {
+            color: $yellow-color;
+        }
+    }
+    .btn-flip {
+        background-color: $yellow-color;
+        color: $light-color;
+        &:after {
+            background-color: $yellow-color;
+            color: $light-color;
+        }
+        &:before {
+            background-color: $yellow-color;
+            color: $light-color;
+        }
+    }
+}
+.bloc-mobile-header.yellow .vertical-position .square-container .square:nth-child(3)::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    width: 32.3px;
+    height: 32.3px; 
+    background-color: transparent;
+    border: 1px solid $yellow-color;
+    z-index: 1;
 }

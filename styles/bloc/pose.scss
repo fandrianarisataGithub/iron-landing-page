@@ -6,6 +6,18 @@
         @include respond-to(macbook) {
             width: 925px;
         }
+        @include respond-to(macbook) {
+            width: 768px;
+        }
+        @include respond-to(macbook) {
+            width: 620px;
+        }
+        @include respond-to(macbook) {
+            width: 393px;
+        }
+        @include respond-to(medium) {
+            display: none;
+        }
         ul {
             margin: 0;
             padding: 0;
@@ -17,7 +29,9 @@
             li {
                 width: 223px;
                 padding-bottom: 50px;
-                
+                @include respond-to(macbook) {
+                    width: 140px;
+                }
                 a {
                     text-decoration: none;
                     color: $dark-color;
@@ -39,6 +53,9 @@
         }
     }
     .list-images {
+        @include respond-to(medium) {
+            margin-top: 60px;
+        }
         > div {
             &:not(:first-child) {
                 margin-top: 25px;
@@ -48,23 +65,40 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+            @include respond-to(xlarge) {
+                width: 768px;
+            }
+            @include respond-to(large) {
+                width: 620px;
+            }
+            @include respond-to(large) {
+                width: 393px;
+            }
         }
         .devant {
             position: relative;
             overflow: hidden;
+            @include respond-to(medium) {
+                width: 393px;
+                height: 267.15px;
+            }
             > span {
                 display: block;
                 position: absolute;
                 text-transform: uppercase;
                 transform: rotate(-90deg);
                 top: 25px;
-                left: -50px;
+                left: -26px;
                 line-height: 15.6px;
                 font-size: 12px;
                 font-weight: 700;
                 @include respond-to(macbook) {
                     left: -25px;
                 }
+                @include respond-to(medium) {
+                    display: none;
+                }
+
             }
             .background-image-face {
                 background-size: cover;
@@ -74,19 +108,31 @@
                 width: 100%;
                 height: auto;
                 background-position-y: 30px;
+                @include respond-to(medium) {
+                    background-position-y: 0px;
+                }
                 > img {
                     width: 100%;
                     position: relative;
                     transform: scale(1.15);
                     transition: top 0.8s ease-in-out;
                     top: -47px;
+                    @include respond-to(medium) {
+                        top: 0;
+                    }
                 }
                 &:hover {
                     transition: all 0.8s ease-in-out;
                     background-position-y: -40px;
+                    @include respond-to(medium) {
+                        top: -10px;
+                    }
                     > img {
                         top: -30px;
                         transition: top 0.8s ease-in-out;
+                        @include respond-to(medium) {
+                            top: -10px;
+                        }
                     }
                 }
             }
@@ -94,19 +140,27 @@
         }
         .dos {
             position: relative;
+            @include respond-to(medium) {
+                width: 393px;
+                height: 165.98px;
+                overflow: hidden;
+            }
             > span {
                 display: block;
                 position: absolute;
                 text-transform: uppercase;
                 transform: rotate(-90deg);
-                top: -10px;
-                right: -25px;
+                top: 11px;
+                right: -30px;
                 line-height: 15.6px;
                 font-size: 12px;
                 font-weight: 700;
                 @include respond-to(macbook) {
                     top: 11px;
                     right: -30px;
+                }
+                @include respond-to(medium) {
+                    display: none;
                 }
             }
             .background-back {
@@ -119,12 +173,18 @@
                     transition: all .8s ease-in-out;
                     position: relative;
                     top: 0;
+                    @include respond-to(medium) {
+                        transform: scale(1.25);
+                    }
                 }
                 &:hover {
                     > img {
                         position: relative;
                         top: 50px;
                         transition: all .8s ease-in-out;
+                        @include respond-to(medium) {
+                            top: 15px;
+                        }
                     }
                 }
             }
@@ -132,21 +192,50 @@
         .epaul-devant {
             display: flex;
             justify-content: space-between;
+            @include respond-to(medium) {
+                flex-direction: column;
+            }
             .cover {
                 width: calc(50% - 12.5px);
+                @include respond-to(medium) {
+                    width: 100%;
+                }
                 > div {
                     display: flex;
                     flex-direction: column;
                     position: relative;
                     background-color:$primary-color;
                     overflow: hidden;
+                    @include respond-to(medium) {
+                        height: 165.98px;
+                        width: 393px;
+                        margin-top: 25px;
+                    }
+                    &:first-child {
+                        @include respond-to(medium) {
+                            margin-top: 0;
+                            margin-bottom: 25px;
+                        }
+                    }
                     &.background-chest {
                         > img {
                             width: 100%;
-                            transform: scale(1.04);
+                            transform: scale(1.02);
                             position: relative;
                             left: 0;
                             transition: left 0.8s ease-in-out;
+
+                            &.mobile-front {
+                                display: none;
+                            }
+                            &.mobile-front {
+                                @include respond-to(medium) {
+                                    transform: scale(1.5);
+                                    position: relative;
+                                    left: -100px;
+                                    display: block;
+                                }
+                            }
                         }
                         &:hover {
                             > img {
@@ -159,10 +248,22 @@
                     &.background-shoulder {
                         > img {
                             width: 100%;
-                            transform: scale(1.04);
+                            transform: scale(1.02);
                             position: relative;
                             right: 0;
                             transition: right 0.8s ease-in-out;
+                            &.mobile-shoulder {
+                                display: none;
+                            }
+                            &.mobile-shoulder {
+                                @include respond-to(medium) {
+                                    transform: scale(2.4);
+                                    position: relative;
+                                    right: -250px;
+                                    top: 80px;
+                                    display: block;
+                                }
+                            }
                         }
                         &:hover {
                             img {
@@ -172,6 +273,7 @@
                             }
                         }
                     }
+                    
                 }
                 > span {
                     display: block;
@@ -180,6 +282,9 @@
                     font-size: 12px;
                     font-weight: 700;
                     margin-top: 15px;
+                    @include respond-to(medium) {
+                        display: none;
+                    }
                 }
                 &:last-child {
                     span {

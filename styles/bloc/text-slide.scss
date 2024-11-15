@@ -6,6 +6,10 @@
     scrollbar-width: none;
     position: relative;
     color: $primary-color;
+    z-index: -1;
+    @include respond-to(medium) {
+        margin: 100px 0px 100px 0px;
+    }
     .slide-item {
         animation: slide-left 5s linear infinite;
         display: flex;
@@ -18,14 +22,12 @@
             margin:0 15px;
             white-space: nowrap;
             display: inline-block;
+            @include respond-to(medium) {
+                font-size: 20px;
+                line-height: 26px;
+            }
         }
-        img {
-            width: 37.87px;
-            height: 21.48px;
-            position: relative;
-            bottom: 5px;
-            transform: rotate(145deg);
-        }
+        
     }
 }
 @keyframes slide-left {

@@ -11,22 +11,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="page-white">
+    <main data-controller="langChange" class="page-white">
         <div class="header-left header-fixed">
-            <img src="./images/lion.png" alt="iron style">
-            <div class="vertical-position">
-                <p class="text-vertical">
-                    Choisissez votre style
-                </p>
-                <div class="square-container">
-                    <a href="index.html" class="square"></a>
-                    <a href="index-green.html" class="square"></a>
-                    <a href="index-yellow.html" class="square"></a>
+            <a href="{{path('homepage')}}"><img src="./images/lion.png" alt="iron style"></a>
+                <div class="vertical-position">
+                    <p class="text-vertical">
+                        Choisissez votre style
+                    </p>
+                    <div class="square-container">
+                        <a href="{{path('homepage')}}" class="square"></a>
+                        <a href="{{path('homepage_green')}}" class="square"></a>
+                        <a href="{{path('homepage_yellow')}}" class="square"></a>
+                    </div>
                 </div>
-            </div>
         </div>
         <div class="header-right header-fixed">
-            <img src="./images/logo.png" alt="iron style">
+            <a href="{{path('homepage')}}"><img src="./images/logo.png" alt="iron style"></a>
             <a href="#" class="lang">
                 EN
             </a>
@@ -58,7 +58,7 @@
                 <h1 class="fs1" data-theme="white"><div>FORCE</div><div>STYLE</div><div>SOLIDARITÉ</div></h1>
                 <h2 data-theme="white"><div>A brighter future</div><div>for Israel</div></h2>
                 <h3>Iron Like Lion in Zion n'est pas seulement un vêtement, <br>
-                    c'est un symbole de solidarité et d'espoir pour Israël</h3>
+                    c'est un symbole de solidarité et d'espoir pour Israël</h3>      
             </div>
         </header>
         <div class="base-section bloc-pose">
@@ -86,12 +86,14 @@
                     <div class="cover">
                         <div class="devant background-chest" data-theme="white">
                             <img src="./images/homme-poitrine-blue.png" alt="iron t-shirt devant">
+                            <img class="mobile-front" src="./images/homme-face-blue.png" alt="iron t-shirt devant">
                         </div>
                         <span>front_</span>
                     </div>
                     <div class="cover">
                         <div class="epaul background-shoulder" data-theme="white">
                             <img src="./images/homme-epaule-blue.png" alt="iron t-shirt epaul">
+                            <img class="mobile-shoulder" src="./images/homme-face-blue.png" alt="iron t-shirt epaul">
                         </div>
                         <span>shoulder_</span>
                     </div>
@@ -204,7 +206,7 @@
             <img src="./images/icone-etoile-blue.png" alt="iron etoil">
         </div>
         <div class="bloc-join-now">
-            <a href="./order.html" data-theme="white" class="primary-button" data-back="JOIN NOW" data-front="JOIN NOW">JOIN NOW</a>
+            <a href="{{path('order_step1')}}" class="btn-flip" data-back="JOIN NOW" data-front="JOIN NOW"></a>
             <div class="title" data-theme="white">
                 and together we can make a real difference
             </div>
@@ -223,20 +225,20 @@
                     <div class="fixed-on">
                         0
                     </div>
-                    <div class="move-on">
-                        <div class="slide-item">1</div>
-                        <div class="slide-item">2</div>
-                        <div class="slide-item">3</div>
+                    <div class="move-on" id="slide-left">
+                        <div class="slide-item active" data-slide-value="1">1</div>
+                        <div class="slide-item" data-slide-value="2">2</div>
+                        <div class="slide-item" data-slide-value="3">3</div>
                     </div>
                 </div>
-                <img src="./images/S-blue.png" alt="iron choose your size">
+                <img src="./images/S-big-blue.png" alt="iron choose your size">
                 <div class="number">
                     <div class="fixed-on">
                     </div>
-                    <div class="move-on">
-                        <div class="title slide-item">Choose <br> your size</div>
-                        <div class="title slide-item">Choose <br> your size 2</div>
-                        <div class="title slide-item">Choose <br> your size 3</div>
+                    <div class="move-on" id="slide-right">
+                        <div class="title slide-item active" data-slide-value="1">Choose <br> your size 1</div>
+                        <div class="title slide-item" data-slide-value="2">Choose <br> your size 2</div>
+                        <div class="title slide-item" data-slide-value="3">Choose <br> your size 3</div>
                     </div>
                 </div>
             </div>
@@ -252,27 +254,27 @@
                 <div class="slide-item">
                     <p>
                         Act now!
-                    </p><span><img src="./images/S-blue.png" alt=""></span>
+                    </p><span><img src="./images/S-big-blue.png" alt=""></span>
                 </div>
                 <div class="slide-item">
                     <p>
                         Act now!
-                    </p><span><img src="./images/S-blue.png" alt=""></span>
+                    </p><span><img src="./images/S-big-blue.png" alt=""></span>
                 </div>
                 <div class="slide-item">
                     <p>
                         Act now!
-                    </p><span><img src="./images/S-blue.png" alt=""></span>
+                    </p><span><img src="./images/S-big-blue.png" alt=""></span>
                 </div>
                 <div class="slide-item">
                     <p>
                         Act now!
-                    </p><span><img src="./images/S-blue.png" alt=""></span>
+                    </p><span><img src="./images/S-big-blue.png" alt=""></span>
                 </div>
                 <div class="slide-item">
                     <p>
                         Act now!
-                    </p><span><img src="./images/S-blue.png" alt=""></span>
+                    </p><span><img src="./images/S-big-blue.png" alt=""></span>
                 </div>
             </div>
         </div>
@@ -292,7 +294,7 @@
                 </p>
             </div>
             <div class="button-container" data-theme="white">
-                <a href="./order.html" class="primary-button" data-front="BUY NOW" data-back="BUY NOW">BUY NOW</a>
+                <a href="{{path('order_step1')}}" class="btn-flip" data-back="BUY NOW" data-front="BUY NOW"></a>
             </div>
         </div>
         <div class="bloc-recommandation">
@@ -323,7 +325,29 @@
                 </div>
             </div>
             <div class="bottom-footer">
-                <a href="policy.html" class="section">
+                <div class="follow-mobile">
+                    <p class="text-vertical">
+                        Suivez le mouvement
+                    </p>
+                    <div class="square-container">
+                        <div class="square">
+                            <a href="#">
+                                <img src="./images/fb-logo.png" alt="iron facebook">
+                            </a>
+                        </div>
+                        <div class="square">
+                            <a href="#">
+                                <img src="./images/insta-logo.png" alt="iron instagram">
+                            </a>
+                        </div>
+                        <div class="whatsapp">
+                            <a href="#">
+                                <img src="./images/icon-whatsapp.png" alt="iron whatsapp">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="{{path('term_policy')}}" class="section a-privacy-policy">
                     <div class="term">
                         TERMS AND CONDITIONS
                     </div>

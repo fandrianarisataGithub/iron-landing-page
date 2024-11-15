@@ -4,11 +4,19 @@
     @include respond-to(macbook) {
         width: 925px;
     }
+    @include respond-to(medium) {
+        margin : 52px auto;
+        width: 393px;
+    }
     .top-footer {
         display: flex;
         justify-content: space-between;
         border-top: 1px solid $dark-color;
         padding-top: 102px;
+        @include respond-to(medium) {
+            padding-top : 52px;
+            flex-direction: column;
+        }
         .part-logo {
             &:first-child {
                 display: flex;
@@ -27,6 +35,27 @@
                     }
                 }
             }
+            @include respond-to(medium) {
+                width: 100%;
+            }
+            &:first-child, &:nth-child(2) {
+                @include respond-to(medium) {
+                    width: 205px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            &:nth-child(2) {
+                @include respond-to(medium) {
+                    margin: 50px auto;
+                }
+            }
+            &:nth-child(3) {
+                @include respond-to(medium) {
+                    width: 341px;
+                    margin: 0px auto;
+                }
+            }
         }
     }
     .bottom-footer {
@@ -34,22 +63,43 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include respond-to(medium) {
+            flex-direction: column;
+            margin: 50px auto 0px;
+        }
         .section {
             width: 50%;
             display: flex;
             text-decoration: none;
             color: $dark-color;
+            @include respond-to(medium) {
+                width: 100%;
+            }
             &:first-child {
                 justify-content: flex-start;
                 font-size: 14px;
                 line-height: 18.2px;
                 font-weight: 700;
+                @include respond-to(medium) {
+                    flex-direction: column;
+                }
                 .term {
                     border-right: 1px solid $dark-color;
                     padding-right: 25px;
+                    @include respond-to(medium) {
+                        padding-right: 0;
+                        border: none;
+                        width: 100%;
+                        text-align: center;
+                    }
                 }
                 >  div:last-child {
                     margin-left: 25px;
+                    @include respond-to(medium) {
+                        margin-left: 0px;
+                        text-align: center;
+                        margin-top: 25px;
+                    }
                 }
             }
             &:last-child {
@@ -57,12 +107,63 @@
                 font-size: 12px;
                 line-height: 15.6px;
                 font-weight: 700;
+                @include respond-to(medium) {
+                    margin-top: 50px;
+                }
                 > div {
                     &:last-child {
                         margin-left: 25px;
                     }
                 }
             }
+        }
+        .follow-mobile {
+            display: none;
+            @include respond-to(medium) {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 60px;
+                width: 300px;
+                margin-bottom: 25px;
+                p.text-vertical {
+                    margin-bottom: 0;
+                    text-transform: uppercase;
+                    
+                }
+                .square-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    .square, .whatsapp {
+                        width: 16px;
+                        height: 16px;
+                        margin-left: 15px;
+                        a {
+                            display: block;
+                            width: 16px;
+                            height: 16px;
+                            > img {
+                                display: block;
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .a-privacy-policy {
+        @include respond-to(medium) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            font-size: 14px;
+            line-height: 18.2px;
+            font-weight: 700;
         }
     }
 }

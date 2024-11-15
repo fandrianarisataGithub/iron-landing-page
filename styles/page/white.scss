@@ -17,4 +17,28 @@
             }
         }
     }
+    .btn-flip {
+        background-color: $blue-color;
+        color: $light-color;
+        &:after {
+            background-color: $blue-color;
+            color: $light-color;
+        }
+        &:before {
+            background-color: $blue-color;
+            color: $light-color;
+        }
+    }
+}
+.bloc-mobile-header.white .vertical-position .square-container .square:first-child::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    width: 32.3px;
+    height: 32.3px; 
+    background-color: transparent;
+    border: 1px solid $blue-color;
+    z-index: 1;
 }

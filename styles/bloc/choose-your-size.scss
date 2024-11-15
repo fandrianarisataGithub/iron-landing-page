@@ -8,6 +8,10 @@
         height: 203px;
         overflow: hidden;
         //border: 1px solid red;
+        @include respond-to(medium) {
+            margin : 52px auto;
+            height: 70px;
+        }
         .number {
             //border: 1px solid green;
             width: calc(50% - 50px);
@@ -19,6 +23,22 @@
                 line-height: 181px;
                 font-weight: 800;
                 color: $primary-color;
+                @include respond-to(macbook) {
+                    font-size: 160px;
+                    line-height: 150px;
+                }
+                @include respond-to(xlarge) {
+                    font-size: 120px;
+                    line-height: 130px;
+                }
+                @include respond-to(large) {
+                    font-size: 100px;
+                    line-height: 130px;
+                }
+                @include respond-to(medium) {
+                    font-size: 69.21px;
+                    line-height: 2.55px;
+                }
             }
             &:last-child {
                 >div {
@@ -39,18 +59,49 @@
                     justify-content: center;
                     align-items: center;
                 }
+                &.fixed-on {
+                    position: relative;
+                    left: 70px;
+                    top: 5px;
+                    @include respond-to(macbook) {
+                        left: 0;
+                        top: 0;
+                    }
+                    @include respond-to(medium) {
+                        top: 33px;
+                    }
+                }
             }
         }
         > img {
             display: block;
             width: 96.74px;
             height: 54.88px;
+            @include respond-to(xlarge) {
+                width: 76.74px;
+                height: 34.88px;
+                position: relative;
+                left: 25px;
+            }
+            @include respond-to(medium) {
+                width: 33px;
+                height: 18px;
+                left: 0;
+            }
         }
         .title {
             text-transform: uppercase;
             font-size: 36px;
             line-height: 46.8px;
             font-weight: 700;
+            @include respond-to(xlarge) {
+                font-size: 25px;
+                line-height: 30.8px;
+            }
+            @include respond-to(medium) {
+                font-size: 13px;
+                line-height: 17px;
+            }
         }
     }
     .sirt {
@@ -58,6 +109,10 @@
         width: 100%;
         height: 686px;
         overflow: hidden;
+        @include respond-to(medium) {
+            height: 236.28px;
+            margin: 52px auto;
+        }
         .cover {
             background-size: cover;
             width: 100%;
@@ -65,6 +120,9 @@
             background-position-y: 0px;
             transition: background-position-y 1s ease-in-out;
             background-repeat: no-repeat;
+            @include respond-to(medium) {
+                height: 236.28px;
+            }
             &:hover {
                 background-position-y: -20px;
                 transition: background-position-y 1s ease-in-out;
